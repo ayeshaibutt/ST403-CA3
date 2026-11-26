@@ -42,3 +42,7 @@ f <- optim(par = ig, fn = nll_lm, data=df,
            hessian = TRUE)
 se <- sqrt(diag(solve(f$hessian)))
 se[1:4]
+
+mod <- lm(y ~ x1 + x2 + x3, data=df)
+coef(mod)
+sigma(mod)
